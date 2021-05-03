@@ -1,88 +1,105 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: '/Object_vvedeni_v_eksplyataciu_JM',
-    name: 'Object_vvedeni_v_eksplyataciu_JM',
+const routes = [{
+    path: "/login",
+    name: "Login",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Object_vvedeni_v_eksplyataciu_JM.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/Login.vue"),
   },
   {
-    path: '/Sdelka_s_kap_stroeniem_PS',
-    name: 'Sdelka_s_kap_stroeniem_PS',
+    path: "/calendar",
+    name: "Calendar",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Sdelka_s_kap_stroeniem_PS.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/Calendar.vue"),
   },
   {
-    path: '/Sdelka_s_izolirovannim_pomejeniem_PS',
-    name: 'Sdelka_s_izolirovannim_pomejeniem_PS',
+    path: "/main",
+    name: "Main",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Sdelka_s_izolirovannim_pomejeniem_PS.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/Main.vue"),
+  },
+
+  {
+    path: "/map",
+    name: "Map",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/Map.vue"),
   },
   {
-    path: '/Object_vvedeni_v_eksplyataciu_PS',
-    name: 'Object_vvedeni_v_eksplyataciu_PS',
+    path: "/tables/students",
+    name: "Students",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Object_vvedeni_v_eksplyataciu_PS.vue')
-  }, 
-  {
-    path: '/Object_vvedeni_v_eksplyataciu_OD',
-    name: 'Object_vvedeni_v_eksplyataciu_OD',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Object_vvedeni_v_eksplyataciu_OD.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Students.vue"),
   },
   {
-    path: '/login',
-    name: 'Login',
+    path: "/tables/groups",
+    name: "Groups",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Login.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Groups.vue"),
   },
   {
-    path: '/pages',
-    name: 'Pages',
+    path: "/tables/organizations",
+    name: "Organizations",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Pages.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Organizations.vue"),
   },
   {
-    path: '/Sdelka_s_izolirovannim_pomejeniem_OD',
-    name: 'Sdelka_s_izolirovannim_pomejeniem_OD',
+    path: "/tables/assigned_students",
+    name: "Assigned_students",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Sdelka_s_izolirovannim_pomejeniem_OD.vue')
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Assigned_students.vue"),
   },
   {
-    path: '/Sdelka_s_kap_stroeniem_OD',
-    name: 'Sdelka_s_kap_stroeniem_OD',
+    path: "/tables/teachers",
+    name: "Teachers",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Sdelka_s_kap_stroeniem_OD.vue')
-  }
-]
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Teachers.vue"),
+  },
+  {
+    path: "/tables/terms_n_types",
+    name: "Terms_n_types",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import( /* webpackChunkName: "about" */ "../views/tables/Terms_n_types.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
-
+export default router;
